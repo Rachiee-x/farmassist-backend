@@ -38,6 +38,9 @@ function missingField(res, field) {
   return errorResponse(res, 400, `Missing ${field} in request body`);
 }
 
+app.post('/', async (req, res) => {
+  res.json({ message: 'Hello from Farm Assist backend!' });
+});
 // --- Endpoints --- 
 
 // Translation endpoint (OpenAI)
